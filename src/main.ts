@@ -1,8 +1,8 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { bootstrap as fastify } from './app.fastify';
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+async function startFastify() {
+    const fastifyInstance = await fastify();
+    fastifyInstance.listen(3000);
 }
-bootstrap();
+
+startFastify();

@@ -1,0 +1,41 @@
+service:
+    name: nestjs-typeorm-serverless-boilerplate
+
+plugins:
+    - serverless-plugin-optimize #  transpile and minify code
+    - serverless-offline
+
+custom:
+    defaultStage: dev
+    profiles:
+        dev: default
+        prod: prod
+    envFiles:
+        dev: ${file(./env/dev.yml)}
+        prod: ${file(./env/prod.yml)}
+
+package:
+    individually: true
+
+provider:
+    name: aws
+    runtime: nodejs8.10
+    stage: ${opt:stage, 'dev'}
+    profile: ${self:custom.profiles.${self:provider.stage}}
+    environment:
+        SERVERLESS_STAGE: ${self:provider.stage}
+        NODE_ENV: ${self:custom.envFiles.${self:provider.stage}.ENV.NODE_ENV}
+        MYSQL_HOST: ${self:custom.envFiles.${self:provider.stage}.ENV.MYSQL_HOST}
+        MYSQL_USER: ${self:custom.envFiles.${self:provider.stage}.ENV.MYSQL_USER}
+        MYSQL_PASSWORD: ${self:custom.envFiles.${self:provider.stage}.ENV.MYSQL_PASSWORD}
+        MYSQL_DATABASE: ${self:custom.envFiles.${self:provider.stage}.ENV.MYSQL_DATABASE}
+        MYSQL_PORT: ${self:custom.envFiles.${self:provider.stage}.ENV.MYSQL_PORT}
+
+functions:
+    api:
+        handler: dist/lambda.handler
+        events:
+            - http:
+                  method: any
+                  path: /{proxy+}
+                  cors: true
