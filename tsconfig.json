@@ -13,7 +13,8 @@
         "paths": {
             "@core/*": ["./src/core/*"],
             "@shared/*": ["./src/shared/*"],
-            "@entities/*": ["./src/entities/*"]
+            "@entities/*": ["./src/entities/*"],
+            "@modules/*": ["./src/modules/*"]
         }
     },
     "exclude": ["node_modules", "dist"]

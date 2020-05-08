@@ -1,0 +1,8 @@
+# rename folder env-example to env
+ENV:
+    NODE_ENV: dev
+    MYSQL_HOST: localhost
+    MYSQL_USER: user
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: nestjs-typeorm
+    MYSQL_PORT: 3306
