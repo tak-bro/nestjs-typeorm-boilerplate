@@ -21,18 +21,18 @@ export class DummyController {
     }
 
     @Get()
-    async getPlayerList(@Query() query: DummyQueryDto): Promise<Pagination<DummyDto>> {
+    async getDummyList(@Query() query: DummyQueryDto): Promise<Pagination<DummyDto>> {
         return await this.dummyService.getList(query);
     }
 
     @Get(':id')
-    async findPlayerById(@Param() params): Promise<DummyDto> {
+    async findDummyById(@Param() params): Promise<DummyDto> {
         return await this.dummyService.findById(params.id);
     }
 
     @Post()
-    async create(@Body() player: CreateDummyDto): Promise<DummyDto> {
-        return await this.dummyService.create(player);
+    async create(@Body() dummy: CreateDummyDto): Promise<DummyDto> {
+        return await this.dummyService.create(dummy);
     }
 
     @Put(':id')

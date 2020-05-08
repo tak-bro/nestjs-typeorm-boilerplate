@@ -38,8 +38,8 @@ export class DummyService {
 
     async findById(dummyId: string): Promise<DummyDto> {
         try {
-            const player = await this.dummyRepository.findOne({ dummyId }).then(dummy => new DummyDto(dummy));
-            return new DummyDto(player);
+            const dummy = await this.dummyRepository.findOne(dummyId).then(dummy => new DummyDto(dummy));
+            return new DummyDto(dummy);
         } catch (err) {
             throw new Error(err);
         }
