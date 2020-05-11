@@ -1,5 +1,4 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
 import { Pagination } from '@core/pagination';
 
 import { DummyDto } from './dto/dummy.dto';
@@ -9,7 +8,6 @@ import { CreateDummyDto } from './dto/create-dummy.dto';
 
 import { DummyService } from './dummy.service';
 
-@ApiTags('dummy')
 @Controller('dummy')
 export class DummyController {
 

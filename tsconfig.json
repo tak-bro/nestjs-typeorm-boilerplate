@@ -12,9 +12,9 @@
         "incremental": true,
         "paths": {
             "@core/*": ["./src/core/*"],
-            "@shared/*": ["./src/shared/*"],
             "@entities/*": ["./src/entities/*"],
-            "@modules/*": ["./src/modules/*"]
+            "@modules/*": ["./src/modules/*"],
+            "@shared/*": ["./src/shared/*"]
         }
     },
     "exclude": ["node_modules", "dist"]
