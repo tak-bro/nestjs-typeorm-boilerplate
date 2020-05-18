@@ -1,11 +1,11 @@
 <h1 align="center">Minimal Boilerplate for NestJS + TypeORM</h1>
 
 <p align="center">
-  <a aria-label="last commit" href="https://github.com/tak-bro/nestjs-typeorm-serverless-boilerplate/commits/develop">
-    <img alt="" src="https://img.shields.io/github/last-commit/tak-bro/nestjs-typeorm-serverless-boilerplate.svg">
+  <a aria-label="last commit" href="https://github.com/tak-bro/nestjs-typeorm-boilerplate/commits/develop">
+    <img alt="" src="https://img.shields.io/github/last-commit/tak-bro/nestjs-typeorm-boilerplate.svg">
   </a>
-  <a aria-label="license" href="https://github.com/tak-bro/nestjs-typeorm-serverless-boilerplate/blob/develop/LICENSE">
-    <img src="https://img.shields.io/github/license/tak-bro/nestjs-typeorm-serverless-boilerplate.svg" alt="">
+  <a aria-label="license" href="https://github.com/tak-bro/nestjs-typeorm-boilerplate/blob/develop/LICENSE">
+    <img src="https://img.shields.io/github/license/tak-bro/nestjs-typeorm-boilerplate.svg" alt="">
   </a>
 </p>
 
@@ -20,8 +20,8 @@
 ### Installation
 
 ```bash
-$ git clone git@github.com:tak-bro/nestjs-typeorm-serverless-boilerplate.git
-$ cd nestjs-typeorm-serverless-boilerplate
+$ git clone git@github.com:tak-bro/nestjs-typeorm-boilerplate.git
+$ cd nestjs-typeorm-boilerplate
 
 # rename .env.example to .env
 $ mv .env.example .env
@@ -34,7 +34,7 @@ $ npm install
 
 ### Template Module
 
-- Please refer **[dummy](https://github.com/tak-bro/nestjs-typeorm-serverless-boilerplate/tree/develop/src/modules/dummy)** folder to getting started with implementing simple REST API
+- Please refer **[dummy](https://github.com/tak-bro/nestjs-typeorm-boilerplate/tree/develop/src/modules/dummy)** folder to getting started with implementing simple REST API
 
 ## Running the app
 
@@ -69,7 +69,7 @@ $ npm run test:cov
 
 Please follow this guidelines when reporting bugs and feature requests:
 
-1. Use [GitHub Issues](https://github.com/tak-bro/nestjs-typeorm-serverless-boilerplate/issues) board to report bugs and feature requests (not our email address)
+1. Use [GitHub Issues](https://github.com/tak-bro/nestjs-typeorm-boilerplate/issues) board to report bugs and feature requests (not our email address)
 2. Please **always** write steps to reproduce the error. That way we can focus on fixing the bug, not scratching our heads trying to reproduce it.
 
 Thanks for understanding!
@@ -80,4 +80,4 @@ Thanks for understanding!
 
 ### License
 
-The MIT License (see the [LICENSE](https://github.com/tak-bro/nestjs-typeorm-serverless-boilerplate/blob/develop/LICENSE) file for the full text)
+The MIT License (see the [LICENSE](https://github.com/tak-bro/nestjs-typeorm-boilerplate/blob/develop/LICENSE) file for the full text)
