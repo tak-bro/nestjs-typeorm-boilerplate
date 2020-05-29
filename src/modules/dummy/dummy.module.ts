@@ -8,11 +8,13 @@ import { DummyService } from './dummy.service';
 
 @Module({
     imports: [
-        TypeOrmModule.forFeature([DummyEntity]),
+        TypeOrmModule.forFeature([
+            DummyEntity
+        ]),
         SharedModule,
     ],
     controllers: [DummyController],
     providers: [DummyService],
     exports: [DummyService]
 })
-export class DummyModule {}
+export class DummyModule { }

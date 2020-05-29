@@ -2,7 +2,6 @@ import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 
 @Entity('Dummy')
 export class DummyEntity {
-
     @PrimaryGeneratedColumn('uuid')
     dummyId: string;
 
@@ -17,5 +16,4 @@ export class DummyEntity {
 
     @UpdateDateColumn({ type: 'timestamp' })
     updatedAt: Date;
-
 }

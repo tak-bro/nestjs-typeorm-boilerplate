@@ -1,9 +1,5 @@
-// to access env via inject service or controller
-// How to use
-// ```
-// constructor(private configService: ConfigService) {}
-// const nodeEnv = this.configService.get('NODE_ENV');
-// ```
+// To access env via inject ConfigService
+// Please refer modules/dummy/dummy.service.ts
 export default () => ({
     NODE_ENV: process.env.NODE_ENV,
     MYSQL_HOST: process.env.MYSQL_HOST,
