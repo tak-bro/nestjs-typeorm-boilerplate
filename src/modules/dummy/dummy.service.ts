@@ -1,4 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, Repository } from 'typeorm';
 
@@ -15,7 +16,13 @@ import { CreateDummyDto } from './dto/create-dummy.dto';
 export class DummyService {
 
     constructor(@InjectRepository(DummyEntity) private readonly dummyRepository: Repository<DummyEntity>,
-                private utilsService: UtilsService) {
+                private readonly utilsService: UtilsService,
+                private readonly configService: ConfigService) {
+    }
+
+    // Introduce to how to use ConfigService
+    getNodeEnvironment() {
+        return this.configService.get('NODE_ENV'); // should be 'local', 'dev' or 'prod'
     }
 
     async findAll(): Promise<DummyDto[]> {
@@ -74,5 +81,4 @@ export class DummyService {
         newDummy.age = createDto.age;
         return newDummy;
     }
-
 }

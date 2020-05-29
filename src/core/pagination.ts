@@ -6,7 +6,6 @@ export interface PaginationResultInterface<PaginationEntity> {
 }
 
 export class Pagination<PaginationEntity> {
-
     public list: PaginationEntity[];
     public total: number;
     public page: number;
